@@ -1,3 +1,3 @@
-<div style="background-color: #555;padding: 15px 32px;display: inline-block;    cursor: pointer;">
-    <a href="{{ route('blog') }}" style="color:white;text-decoration:none" >Back to blog</a>
+<div style="background-color: #555;display: inline-block;cursor: pointer;">
+    <a href="{{ route('blog') }}" style="color:white;text-decoration:none;padding: 0px 32px;" >Back to blog</a>
 </div>

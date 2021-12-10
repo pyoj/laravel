@@ -44,7 +44,7 @@ class PostController extends Controller
             'slug' => strtolower(str_replace(" ", "-", $request->input('title')))
         ];
 
-        Post::create($request->all() + $slug);
+        Post::create($request->all() + $slug + ['user_id' => 1]);
 
         return redirect()->route("posts.index")->with("success", "Post was created");
     }

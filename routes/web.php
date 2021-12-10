@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,10 @@ Route::get('/', function () {
 Route::resource('posts', PostController::class)->parameters([
     'posts' => 'slug'
 ]);
+
+
+Route::get("/json", function () {
+    $user = User::findOrFail(1);
+
+    return $user->posts;
+});

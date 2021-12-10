@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string("slug")->unique();
             $table->text("description");
             $table->text("keywords")->nullable();
+            $table->integer("user_id")->unsigned();
             $table->timestamps();
         });
     }

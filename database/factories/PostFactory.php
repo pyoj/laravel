@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class BlogFactory extends Factory
+class PostFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -13,13 +13,11 @@ class BlogFactory extends Factory
      */
     public function definition()
     {
-
         return [
             'title' => $this->faker->sentence,
-            'body' => $this->faker->realText(500),
             'slug' => $this->faker->slug,
-            'author' => $this->faker->name,
-            'tags' => $this->faker->word . ", " . $this->faker->word
+            'description' => $this->faker->realText(300),
+            'keywords' => $this->faker->word . ", " . $this->faker->word . ", " . $this->faker->word
         ];
     }
 }

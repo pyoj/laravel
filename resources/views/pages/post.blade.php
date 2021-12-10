@@ -7,10 +7,9 @@
         @include('components.button')
         <div style="text-align: center">
             <h1>{{ $post->title }}</h1>
-            <p>{{ $post->body }}</p>
+            <p>{{ $post->description }}</p>
         </div>
         <hr />
-        <p>Author: {{ $post->author }}</p>
-        <p>Tags: {{ $post->tags }}</p>
+        <p>Keywords: {{ $post->keywords }}</p>
     </div>
 @endsection

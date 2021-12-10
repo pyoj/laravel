@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blog', [BlogController::class, 'showBlog'])->name("blog");
-
-Route::get('/post/{slug}', [BlogController::class, 'showPost'])->name("viewPosts");
+Route::resource('posts', PostController::class)->parameters([
+    'posts' => 'slug'
+]);
